@@ -1,7 +1,6 @@
 import argparse
 from coatt.simple_baseline_experiment_runner import SimpleBaselineExperimentRunner
 from coatt.coattention_experiment_runner import CoattentionNetExperimentRunner
-from coatt.clevr_simple_baseline_runner import ClevrSimpleBaselineExperimentRunner
 
 
 if __name__ == "__main__":
@@ -25,7 +24,8 @@ if __name__ == "__main__":
         if args.dataset == "vqa":
             experiment_runner_class = SimpleBaselineExperimentRunner
         elif args.dataset == "clevr":
-            experiment_runner_class = ClevrSimpleBaselineExperimentRunner
+            #experiment_runner_class = ClevrSimpleBaselineExperimentRunner
+            raise ModuleNotFoundError()
         else:
             raise ModuleNotFoundError()
             
